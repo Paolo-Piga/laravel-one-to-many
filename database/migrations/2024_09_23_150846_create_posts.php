@@ -12,17 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            Schema::create('post_table', function (Blueprint $table) {
-                $table->id();
-                $table->char('title', 255);
-                $table->string('topic', 255);
-                $table->date('start_date');
-                $table->date('end_date');
-                $table->string('post_number', 255);
-                $table->string('team', 255);
-                $table->timestamps();
-            });
-        });
+            $table->id();
+            $table->char('title', 255);
+            $table->string('topic', 255);
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('post_number', 255);
+            $table->string('team', 255);
+            $table->timestamps();
+    });
     }
 
     /**
